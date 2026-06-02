@@ -32,6 +32,8 @@
       <outline type="rss" text="LinuxDo 热门话题" title="LinuxDo 热门话题" xmlUrl="https://linux.do/top.rss"/>
       <outline type="rss" text="V2EX 最热" title="V2EX 最热" xmlUrl="https://www.v2ex.com/feed/tab/hot.xml"/>
       <outline type="rss" text="V2EX 技术" title="V2EX 技术" xmlUrl="https://www.v2ex.com/feed/tab/tech.xml"/>
+      <outline type="rss" text="NodeSeek 最新话题" title="NodeSeek 最新话题" xmlUrl="https://rss.nodeseek.com/"/>
+      <outline type="rss" text="奶昔论坛最新话题" title="奶昔论坛最新话题" xmlUrl="https://forum.naixi.net/forum.php?mod=rss"/>
       <outline type="rss" text="Hacker News 首页" title="Hacker News 首页" xmlUrl="https://hnrss.org/frontpage"/>
       <outline type="rss" text="Hacker News 最佳" title="Hacker News 最佳" xmlUrl="https://hnrss.org/best"/>
       <outline type="rss" text="Hacker News Ask" title="Hacker News Ask" xmlUrl="https://hnrss.org/ask"/>

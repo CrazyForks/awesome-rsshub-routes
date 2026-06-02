@@ -114,6 +114,20 @@ Built on Discourse with native RSS support.
 
 > Note: These feeds may require a proxy in some regions.
 
+#### NodeSeek
+
+| Name          | Feed URL                    | Description             |
+| ------------- | --------------------------- | ----------------------- |
+| Latest Topics | `https://rss.nodeseek.com/` | Latest community topics |
+
+#### Naixi Forum
+
+| Name          | Feed URL                                      | Description             |
+| ------------- | --------------------------------------------- | ----------------------- |
+| Latest Topics | `https://forum.naixi.net/forum.php?mod=rss`  | Latest forum topics     |
+
+> Note: Naixi Forum may return Cloudflare protection pages for some clients.
+
 #### Hacker News
 
 | Name       | Feed URL                      | Description        |
@@ -412,8 +426,12 @@ See [contributing.md](contributing.md) for guidelines on adding feeds.
 
 If this project saves you time finding quality RSS feeds, you can support it by buying me a coffee.
 
-<p>
-  <img src="./assets/sponsor-alipay.png" width="160" alt="Alipay">
-  <img src="./assets/sponsor-wechat.png" width="160" alt="WeChat Pay">
-</p>
+<details>
+  <summary>Show support QR codes</summary>
+
+  <p>
+    <img src="./assets/sponsor-alipay.png" width="160" alt="Alipay">
+    <img src="./assets/sponsor-wechat.png" width="160" alt="WeChat Pay">
+  </p>
+</details>
 

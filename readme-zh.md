@@ -120,6 +120,20 @@
 
 > 💡 部分地区访问这些订阅可能需要代理
 
+#### NodeSeek
+
+| 名称 | 订阅地址 | 说明 |
+|------|----------|------|
+| 最新话题 | `https://rss.nodeseek.com/` | 社区最新话题 |
+
+#### 奶昔论坛
+
+| 名称 | 订阅地址 | 说明 |
+|------|----------|------|
+| 最新话题 | `https://forum.naixi.net/forum.php?mod=rss` | 论坛最新话题 |
+
+> 💡 奶昔论坛在部分客户端可能返回 Cloudflare 防护页面
+
 #### Hacker News
 
 | 名称 | 订阅地址 | 说明 |
@@ -496,10 +510,14 @@
 
 如果这个项目帮你节省了寻找优质 RSS 订阅源的时间，欢迎请我喝杯咖啡。
 
-<p>
-  <img src="./assets/sponsor-alipay.png" width="160" alt="支付宝收款码">
-  <img src="./assets/sponsor-wechat.png" width="160" alt="微信收款码">
-</p>
+<details>
+  <summary>展开查看收款码</summary>
+
+  <p>
+    <img src="./assets/sponsor-alipay.png" width="160" alt="支付宝收款码">
+    <img src="./assets/sponsor-wechat.png" width="160" alt="微信收款码">
+  </p>
+</details>
 
 ---
 
