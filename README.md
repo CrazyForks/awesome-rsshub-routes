@@ -408,3 +408,12 @@ Simply copy the feed URL into your RSS reader. No assembly required.
 
 See [contributing.md](contributing.md) for guidelines on adding feeds.
 
+## Support This Project
+
+If this project saves you time finding quality RSS feeds, you can support it by buying me a coffee.
+
+<p>
+  <img src="./assets/sponsor-alipay.png" width="160" alt="Alipay">
+  <img src="./assets/sponsor-wechat.png" width="160" alt="WeChat Pay">
+</p>
+

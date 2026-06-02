@@ -492,6 +492,17 @@
 
 ---
 
+## ☕ 支持项目
+
+如果这个项目帮你节省了寻找优质 RSS 订阅源的时间，欢迎请我喝杯咖啡。
+
+<p>
+  <img src="./assets/sponsor-alipay.png" width="160" alt="支付宝收款码">
+  <img src="./assets/sponsor-wechat.png" width="160" alt="微信收款码">
+</p>
+
+---
+
 ## 📜 相关资源
 
 - [RSSHub 官方文档](https://docs.rsshub.app/)
