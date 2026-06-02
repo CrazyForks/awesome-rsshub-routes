@@ -1,10 +1,10 @@
 {
-  "checkTime": "2026-06-02 18:17:12 (北京时间)",
+  "checkTime": "2026-06-02 18:56:30 (北京时间)",
   "total": 85,
-  "valid": 81,
+  "valid": 82,
   "limited": 3,
-  "invalid": 1,
-  "successRate": "95.3%",
+  "invalid": 0,
+  "successRate": "96.5%",
   "feeds": [
     {
       "name": "OpenAI 博客",
@@ -90,11 +90,11 @@
     {
       "name": "Hacker News OpenClaw",
       "url": "https://hnrss.org/newest?q=OpenClaw",
-      "status": "invalid",
-      "valid": false,
+      "status": "valid",
+      "valid": true,
       "limited": false,
-      "statusCode": 502,
-      "error": "HTTP 502"
+      "statusCode": 200,
+      "error": null
     },
     {
       "name": "Hugging Face 博客",
@@ -138,7 +138,7 @@
       "status": "valid",
       "valid": true,
       "limited": false,
-      "statusCode": 302,
+      "statusCode": 200,
       "error": null
     },
     {
@@ -723,7 +723,7 @@
       "status": "valid",
       "valid": true,
       "limited": false,
-      "statusCode": 200,
+      "statusCode": 303,
       "error": null
     },
     {
