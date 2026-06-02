@@ -1,9 +1,9 @@
 {
-  "checkTime": "2026-06-02 17:29:18 (北京时间)",
+  "checkTime": "2026-06-02 17:55:20 (北京时间)",
   "total": 85,
-  "valid": 84,
-  "invalid": 1,
-  "successRate": "98.8%",
+  "valid": 83,
+  "invalid": 2,
+  "successRate": "97.6%",
   "feeds": [
     {
       "name": "OpenAI 博客",
@@ -78,9 +78,9 @@
     {
       "name": "Hugging Face 博客",
       "url": "https://huggingface.co/blog/feed.xml",
-      "valid": true,
-      "statusCode": 200,
-      "error": null
+      "valid": false,
+      "statusCode": 429,
+      "error": "HTTP 429"
     },
     {
       "name": "Stability AI",
@@ -204,9 +204,9 @@
     {
       "name": "IT之家",
       "url": "https://www.ithome.com/rss/",
-      "valid": true,
-      "statusCode": 200,
-      "error": null
+      "valid": false,
+      "statusCode": null,
+      "error": "Timeout"
     },
     {
       "name": "TechCrunch",
@@ -316,9 +316,9 @@
     {
       "name": "CSS-Tricks",
       "url": "https://css-tricks.com/feed/",
-      "valid": false,
+      "valid": true,
       "statusCode": 415,
-      "error": "HTTP 415"
+      "error": null
     },
     {
       "name": "Astro Blog",
@@ -450,7 +450,7 @@
       "name": "Kotlin Blog",
       "url": "https://blog.jetbrains.com/kotlin/feed/",
       "valid": true,
-      "statusCode": 200,
+      "statusCode": 403,
       "error": null
     },
     {
