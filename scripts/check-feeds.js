@@ -65,8 +65,9 @@ async function checkUrl(url, timeout = 30000) {
     return { valid: true, statusCode: null, error: null };
   }
 
-  // 判断首次请求是否成功
-  const isValid = (code) => code && (code < 400 || code === 403 || code === 405);
+  // 判断请求是否成功。部分站点会对自动化请求返回 403/405/415，
+  // 但浏览器或阅读器仍可正常访问，避免把这类防护响应误判为死链。
+  const isValid = (code) => code && (code < 400 || code === 403 || code === 405 || code === 415);
 
   if (isValid(statusCode)) {
     return { valid: true, statusCode, error: null };
