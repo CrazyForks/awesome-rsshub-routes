@@ -62,20 +62,24 @@ async function checkUrl(url, timeout = 30000) {
 
   // 证书错误不算失效
   if (error && error.includes('certificate')) {
-    return { valid: true, statusCode: null, error: null };
+    return { status: 'valid', valid: true, limited: false, statusCode: null, error: null };
   }
 
-  // 判断请求是否成功。部分站点会对自动化请求返回 403/405/415，
-  // 但浏览器或阅读器仍可正常访问，避免把这类防护响应误判为死链。
-  const isValid = (code) => code && (code < 400 || code === 403 || code === 405 || code === 415);
+  const isSuccess = (code) => code && code < 400;
+  // 这些状态通常表示防护、限流或方法限制。它们不是死链，但需要在报告里提示。
+  const isLimited = (code) => code && (code === 403 || code === 405 || code === 415 || code === 429);
 
-  if (isValid(statusCode)) {
-    return { valid: true, statusCode, error: null };
+  if (isSuccess(statusCode)) {
+    return { status: 'valid', valid: true, limited: false, statusCode, error: null };
+  }
+
+  if (isLimited(statusCode)) {
+    return { status: 'limited', valid: false, limited: true, statusCode, error: `HTTP ${statusCode}` };
   }
 
   // 404 是明确的资源不存在，不重试
   if (statusCode === 404) {
-    return { valid: false, statusCode, error: 'HTTP 404' };
+    return { status: 'invalid', valid: false, limited: false, statusCode, error: 'HTTP 404' };
   }
 
   // 其他所有失败情况（4xx/5xx/网络错误/超时）统一重试一次
@@ -83,15 +87,21 @@ async function checkUrl(url, timeout = 30000) {
   const retry = await doRequest(url, retryHeaders, timeout);
 
   if (retry.error && retry.error.includes('certificate')) {
-    return { valid: true, statusCode: null, error: null };
+    return { status: 'valid', valid: true, limited: false, statusCode: null, error: null };
   }
 
-  if (isValid(retry.statusCode)) {
-    return { valid: true, statusCode: retry.statusCode, error: null };
+  if (isSuccess(retry.statusCode)) {
+    return { status: 'valid', valid: true, limited: false, statusCode: retry.statusCode, error: null };
+  }
+
+  if (isLimited(retry.statusCode)) {
+    return { status: 'limited', valid: false, limited: true, statusCode: retry.statusCode, error: `HTTP ${retry.statusCode}` };
   }
 
   return {
+    status: 'invalid',
     valid: false,
+    limited: false,
     statusCode: retry.statusCode || statusCode,
     error: retry.error || `HTTP ${retry.statusCode || statusCode}`
   };
@@ -116,6 +126,7 @@ async function main() {
   
   const results = [];
   let validCount = 0;
+  let limitedCount = 0;
   let invalidCount = 0;
   
   for (let i = 0; i < feeds.length; i++) {
@@ -124,9 +135,12 @@ async function main() {
     
     const result = await checkUrl(feed.url);
     
-    if (result.valid) {
+    if (result.status === 'valid') {
       console.log(`✅ OK (${result.statusCode})`);
       validCount++;
+    } else if (result.status === 'limited') {
+      console.log(`⚠️ 受限 (${result.error})`);
+      limitedCount++;
     } else {
       console.log(`❌ 失败 (${result.error})`);
       invalidCount++;
@@ -135,7 +149,9 @@ async function main() {
     results.push({
       name: feed.name,
       url: feed.url,
+      status: result.status,
       valid: result.valid,
+      limited: result.limited,
       statusCode: result.statusCode,
       error: result.error
     });
@@ -154,6 +170,7 @@ async function main() {
     checkTime: checkTimeStr,
     total: feeds.length,
     valid: validCount,
+    limited: limitedCount,
     invalid: invalidCount,
     successRate: `${((validCount / feeds.length) * 100).toFixed(1)}%`,
     feeds: results
@@ -165,14 +182,22 @@ async function main() {
   console.log('\n' + '='.repeat(50));
   console.log(`📊 检测完成！`);
   console.log(`   ✅ 可用: ${validCount}`);
+  console.log(`   ⚠️ 受限: ${limitedCount}`);
   console.log(`   ❌ 失效: ${invalidCount}`);
   console.log(`   📈 成功率: ${report.successRate}`);
   console.log('='.repeat(50));
+
+  if (limitedCount > 0) {
+    console.log('\n⚠️ 受限链接列表:');
+    results.filter(r => r.status === 'limited').forEach(r => {
+      console.log(`   - ${r.name}: ${r.error}`);
+    });
+  }
   
   // 如果有失效链接，列出来
   if (invalidCount > 0) {
     console.log('\n⚠️ 失效链接列表:');
-    results.filter(r => !r.valid).forEach(r => {
+    results.filter(r => r.status === 'invalid').forEach(r => {
       console.log(`   - ${r.name}: ${r.error}`);
     });
     

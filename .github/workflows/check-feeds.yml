@@ -1,8 +1,6 @@
 name: Check RSS Feeds
 
 on:
-  push:
-    branches: [main]
   schedule:
     # 每周一早上 10 点 (北京时间 UTC+8，即 UTC 2 点) 运行
     - cron: '0 2 * * 1'
@@ -41,7 +39,8 @@ jobs:
             }
             
             const status = JSON.parse(fs.readFileSync('feed-status.json', 'utf8'));
-            const broken = status.feeds.filter(f => !f.valid);
+            const broken = status.feeds.filter(f => f.status === 'invalid' || (!f.valid && !f.limited));
+            const limited = status.feeds.filter(f => f.status === 'limited' || f.limited);
             const issueTitle = '📊 RSS 订阅源健康状态报告';
             
             // 查找是否已存在状态报告 Issue，并固定复用同一个
@@ -64,8 +63,18 @@ jobs:
             body += `> 🕐 最近检测时间: ${status.checkTime}\n\n`;
             body += `| 指标 | 数值 |\n|------|------|\n`;
             body += `| ✅ 可用 | ${status.valid} |\n`;
+            body += `| ⚠️ 受限 | ${status.limited || limited.length} |\n`;
             body += `| ❌ 失效 | ${status.invalid} |\n`;
             body += `| 📈 成功率 | ${status.successRate} |\n\n`;
+
+            if (limited.length > 0) {
+              body += `### ⚠️ 受限链接 (${limited.length} 个)\n\n`;
+              body += `| 名称 | 响应 |\n|------|------|\n`;
+              limited.forEach(f => {
+                body += `| ${f.name} | ${f.error || `HTTP ${f.statusCode}`} |\n`;
+              });
+              body += `\n> 这些链接通常是目标站对自动化请求的防护、限流或方法限制；不计为死链，但建议持续观察。\n\n`;
+            }
             
             if (broken.length > 0) {
               body += `### ⚠️ 失效链接 (${broken.length} 个)\n\n`;
@@ -74,6 +83,9 @@ jobs:
                 body += `| ${f.name} | ${f.error} |\n`;
               });
               body += `\n> 请检查这些链接是否需要更新或移除\n`;
+            } else if (limited.length > 0) {
+              body += `### ✅ 暂无确认失效链接\n\n`;
+              body += `当前没有明确失效的订阅源，但存在 ${limited.length} 个受限响应。\n`;
             } else {
               body += `### ✅ 所有链接正常！\n\n`;
               body += `全部 ${status.total} 个订阅源都可以正常访问。\n`;
@@ -144,6 +156,7 @@ jobs:
             # 使用 jq 或 node 解析 JSON 更可靠
             TOTAL=$(node -e "console.log(require('./feed-status.json').total || 0)")
             VALID=$(node -e "console.log(require('./feed-status.json').valid || 0)")
+            LIMITED=$(node -e "console.log(require('./feed-status.json').limited || 0)")
             INVALID=$(node -e "console.log(require('./feed-status.json').invalid || 0)")
             RATE=$(node -e "console.log(require('./feed-status.json').successRate || '0%')")
             CHECK_TIME=$(node -e "console.log(require('./feed-status.json').checkTime || 'N/A')")
@@ -151,6 +164,9 @@ jobs:
             if [ "$INVALID" -gt 0 ]; then
               echo "subject=⚠️ RSS 订阅源检测发现 ${INVALID} 个失效链接" >> $GITHUB_OUTPUT
               echo "status=有问题" >> $GITHUB_OUTPUT
+            elif [ "$LIMITED" -gt 0 ]; then
+              echo "subject=⚠️ RSS 订阅源检测发现 ${LIMITED} 个受限响应" >> $GITHUB_OUTPUT
+              echo "status=有受限响应" >> $GITHUB_OUTPUT
             else
               echo "subject=✅ RSS 订阅源检测全部正常" >> $GITHUB_OUTPUT
               echo "status=全部正常" >> $GITHUB_OUTPUT
@@ -158,6 +174,7 @@ jobs:
             
             echo "total=$TOTAL" >> $GITHUB_OUTPUT
             echo "valid=$VALID" >> $GITHUB_OUTPUT
+            echo "limited=$LIMITED" >> $GITHUB_OUTPUT
             echo "invalid=$INVALID" >> $GITHUB_OUTPUT
             echo "rate=$RATE" >> $GITHUB_OUTPUT
             echo "check_time=$CHECK_TIME" >> $GITHUB_OUTPUT
@@ -166,6 +183,7 @@ jobs:
             echo "status=检测失败" >> $GITHUB_OUTPUT
             echo "total=0" >> $GITHUB_OUTPUT
             echo "valid=0" >> $GITHUB_OUTPUT
+            echo "limited=0" >> $GITHUB_OUTPUT
             echo "invalid=0" >> $GITHUB_OUTPUT
             echo "rate=N/A" >> $GITHUB_OUTPUT
             echo "check_time=N/A" >> $GITHUB_OUTPUT
@@ -192,6 +210,7 @@ jobs:
             📊 检测结果
             ================================
             ✅ 可用: ${{ steps.email.outputs.valid }}
+            ⚠️ 受限: ${{ steps.email.outputs.limited }}
             ❌ 失效: ${{ steps.email.outputs.invalid }}
             📈 成功率: ${{ steps.email.outputs.rate }}
             📋 总数: ${{ steps.email.outputs.total }}
