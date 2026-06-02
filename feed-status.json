@@ -1,9 +1,9 @@
 {
-  "checkTime": "2026-06-02 17:22:24 (北京时间)",
-  "total": 83,
-  "valid": 83,
-  "invalid": 0,
-  "successRate": "100.0%",
+  "checkTime": "2026-06-02 17:29:18 (北京时间)",
+  "total": 85,
+  "valid": 84,
+  "invalid": 1,
+  "successRate": "98.8%",
   "feeds": [
     {
       "name": "OpenAI 博客",
@@ -107,7 +107,7 @@
       "name": "机器之心",
       "url": "https://www.jiqizhixin.com/rss",
       "valid": true,
-      "statusCode": 302,
+      "statusCode": 200,
       "error": null
     },
     {
@@ -143,6 +143,20 @@
       "url": "https://www.v2ex.com/feed/tab/tech.xml",
       "valid": true,
       "statusCode": 200,
+      "error": null
+    },
+    {
+      "name": "NodeSeek 最新话题",
+      "url": "https://rss.nodeseek.com/",
+      "valid": true,
+      "statusCode": 200,
+      "error": null
+    },
+    {
+      "name": "奶昔论坛最新话题",
+      "url": "https://forum.naixi.net/forum.php?mod=rss",
+      "valid": true,
+      "statusCode": 403,
       "error": null
     },
     {
@@ -302,9 +316,9 @@
     {
       "name": "CSS-Tricks",
       "url": "https://css-tricks.com/feed/",
-      "valid": true,
-      "statusCode": 200,
-      "error": null
+      "valid": false,
+      "statusCode": 415,
+      "error": "HTTP 415"
     },
     {
       "name": "Astro Blog",
@@ -548,7 +562,7 @@
       "name": "Nature",
       "url": "https://www.nature.com/nature.rss",
       "valid": true,
-      "statusCode": 200,
+      "statusCode": 303,
       "error": null
     },
     {
