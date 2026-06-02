@@ -426,12 +426,5 @@ See [contributing.md](contributing.md) for guidelines on adding feeds.
 
 If this project saves you time finding quality RSS feeds, you can support it by buying me a coffee.
 
-<details>
-  <summary>Show support QR codes</summary>
-
-  <p>
-    <img src="./assets/sponsor-alipay.png" width="160" alt="Alipay">
-    <img src="./assets/sponsor-wechat.png" width="160" alt="WeChat Pay">
-  </p>
-</details>
+[Support via PayPal](https://paypal.me/JackyST0)
 
