@@ -426,7 +426,11 @@ See [contributing.md](contributing.md) for guidelines on adding feeds.
 
 If this project saves you time finding quality RSS feeds, you can support it by buying me a coffee.
 
-[Support via PayPal](https://paypal.me/JackyST0)
+<details>
+  <summary>Support via PayPal</summary>
+
+  [PayPal.me/JackyST0](https://paypal.me/JackyST0)
+</details>
 
 ## Related Resources
 
