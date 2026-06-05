@@ -39,6 +39,7 @@ This repository is designed as a usable feed directory rather than a traditional
   - [Programming Language Blogs](#programming-language-blogs)
   - [Big Tech Engineering Blogs](#big-tech-engineering-blogs)
   - [Tech Newsletters](#tech-newsletters)
+  - [Developer Tool Release Tracking](#developer-tool-release-tracking)
   - [Academic Papers](#academic-papers)
 - [RSSHub Routes](#rsshub-routes)
   - [Social Media](#social-media)
@@ -76,6 +77,7 @@ AI company blogs, research papers, tools and products.
 | Hacker News AI         | `https://hnrss.org/newest?q=AI`   | HN AI posts  |
 | Hacker News LLM        | `https://hnrss.org/newest?q=LLM`  | HN LLM posts |
 | Hacker News OpenClaw   | `https://hnrss.org/newest?q=OpenClaw` | HN OpenClaw posts |
+| Google Research Blog   | `https://research.google/blog/rss/` | Google research updates |
 
 #### AI Tools and Products
 
@@ -87,6 +89,16 @@ AI company blogs, research papers, tools and products.
 | OpenClaw Commits     | `https://github.com/openclaw/openclaw/commits/main.atom` | Main branch activity         |
 | Synced               | `https://www.jiqizhixin.com/rss`               | Top Chinese AI media               |
 | Simon Willison's Blog | `https://simonwillison.net/atom/everything/`  | LLM insights, Django co-creator    |
+
+#### AI Coding and Agent Tools
+
+| Name                       | Feed URL                                                     | Description                 |
+| -------------------------- | ------------------------------------------------------------ | --------------------------- |
+| OpenAI Codex Releases      | `https://github.com/openai/codex/releases.atom`              | Codex CLI releases          |
+| Claude Code Releases       | `https://github.com/anthropics/claude-code/releases.atom`    | Claude Code releases        |
+| Gemini CLI Releases        | `https://github.com/google-gemini/gemini-cli/releases.atom`  | Gemini CLI releases         |
+| MCP Specification Releases | `https://github.com/modelcontextprotocol/specification/releases.atom` | MCP spec updates |
+| MCP Servers Releases       | `https://github.com/modelcontextprotocol/servers/releases.atom` | MCP server updates        |
 
 ### Tech Communities
 
@@ -236,6 +248,8 @@ Engineering blogs from major tech companies.
 | Name                | Feed URL                                  | Description            |
 | ------------------- | ----------------------------------------- | ---------------------- |
 | GitHub Blog         | `https://github.blog/feed/`               | GitHub official blog   |
+| GitHub Changelog    | `https://github.blog/changelog/feed/`     | GitHub platform updates |
+| GitHub Copilot Changelog | `https://github.blog/changelog/label/copilot/feed/` | Copilot product updates |
 | Netflix Tech Blog   | `https://netflixtechblog.com/feed`        | Netflix engineering    |
 | AWS Blog            | `https://aws.amazon.com/blogs/aws/feed/`  | AWS official blog      |
 | Cloudflare Blog     | `https://blog.cloudflare.com/rss/`        | Cloudflare engineering |
@@ -257,6 +271,18 @@ High signal-to-noise ratio weekly digests.
 | This Week in Rust | `https://this-week-in-rust.org/atom.xml` | Rust community weekly        |
 | Golang Weekly     | `https://golangweekly.com/rss/`          | Go ecosystem weekly          |
 | ByteByteGo        | `https://blog.bytebytego.com/feed`       | System design newsletter     |
+
+### Developer Tool Release Tracking
+
+Useful release feeds for fast-moving developer tools.
+
+| Tool       | Feed URL                                               | Description       |
+| ---------- | ------------------------------------------------------ | ----------------- |
+| uv         | `https://github.com/astral-sh/uv/releases.atom`        | Python package manager |
+| Zed        | `https://github.com/zed-industries/zed/releases.atom`  | Code editor       |
+| Bun        | `https://github.com/oven-sh/bun/releases.atom`         | JavaScript runtime |
+| Biome      | `https://github.com/biomejs/biome/releases.atom`       | Formatter and linter |
+| LangChain  | `https://github.com/langchain-ai/langchain/releases.atom` | Agent framework releases |
 
 ### Academic Papers
 

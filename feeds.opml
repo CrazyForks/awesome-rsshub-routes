@@ -18,12 +18,18 @@
       <outline type="rss" text="Hacker News AI" title="Hacker News AI" xmlUrl="https://hnrss.org/newest?q=AI"/>
       <outline type="rss" text="Hacker News LLM" title="Hacker News LLM" xmlUrl="https://hnrss.org/newest?q=LLM"/>
       <outline type="rss" text="Hacker News OpenClaw" title="Hacker News OpenClaw" xmlUrl="https://hnrss.org/newest?q=OpenClaw"/>
+      <outline type="rss" text="Google Research Blog" title="Google Research Blog" xmlUrl="https://research.google/blog/rss/"/>
       <outline type="rss" text="Hugging Face 博客" title="Hugging Face 博客" xmlUrl="https://huggingface.co/blog/feed.xml"/>
       <outline type="rss" text="Stability AI" title="Stability AI" xmlUrl="https://stability.ai/news?format=rss"/>
       <outline type="rss" text="OpenClaw Releases" title="OpenClaw Releases" xmlUrl="https://github.com/openclaw/openclaw/releases.atom"/>
       <outline type="rss" text="OpenClaw Commits" title="OpenClaw Commits" xmlUrl="https://github.com/openclaw/openclaw/commits/main.atom"/>
       <outline type="rss" text="机器之心" title="机器之心" xmlUrl="https://www.jiqizhixin.com/rss"/>
       <outline type="rss" text="Simon Willison's Blog" title="Simon Willison's Blog" xmlUrl="https://simonwillison.net/atom/everything/"/>
+      <outline type="rss" text="OpenAI Codex Releases" title="OpenAI Codex Releases" xmlUrl="https://github.com/openai/codex/releases.atom"/>
+      <outline type="rss" text="Claude Code Releases" title="Claude Code Releases" xmlUrl="https://github.com/anthropics/claude-code/releases.atom"/>
+      <outline type="rss" text="Gemini CLI Releases" title="Gemini CLI Releases" xmlUrl="https://github.com/google-gemini/gemini-cli/releases.atom"/>
+      <outline type="rss" text="MCP Specification Releases" title="MCP Specification Releases" xmlUrl="https://github.com/modelcontextprotocol/specification/releases.atom"/>
+      <outline type="rss" text="MCP Servers Releases" title="MCP Servers Releases" xmlUrl="https://github.com/modelcontextprotocol/servers/releases.atom"/>
     </outline>
 
     <!-- 技术社区 -->
@@ -101,6 +107,8 @@
     <!-- 大厂技术博客 -->
     <outline text="🏢 大厂技术博客" title="大厂技术博客">
       <outline type="rss" text="GitHub Blog" title="GitHub Blog" xmlUrl="https://github.blog/feed/"/>
+      <outline type="rss" text="GitHub Changelog" title="GitHub Changelog" xmlUrl="https://github.blog/changelog/feed/"/>
+      <outline type="rss" text="GitHub Copilot Changelog" title="GitHub Copilot Changelog" xmlUrl="https://github.blog/changelog/label/copilot/feed/"/>
       <outline type="rss" text="Netflix Tech Blog" title="Netflix Tech Blog" xmlUrl="https://netflixtechblog.com/feed"/>
       <outline type="rss" text="AWS Blog" title="AWS Blog" xmlUrl="https://aws.amazon.com/blogs/aws/feed/"/>
       <outline type="rss" text="Cloudflare Blog" title="Cloudflare Blog" xmlUrl="https://blog.cloudflare.com/rss/"/>
@@ -119,6 +127,15 @@
       <outline type="rss" text="This Week in Rust" title="This Week in Rust" xmlUrl="https://this-week-in-rust.org/atom.xml"/>
       <outline type="rss" text="Golang Weekly" title="Golang Weekly" xmlUrl="https://golangweekly.com/rss/"/>
       <outline type="rss" text="ByteByteGo" title="ByteByteGo" xmlUrl="https://blog.bytebytego.com/feed"/>
+    </outline>
+
+    <!-- 开发工具版本追踪 -->
+    <outline text="🧰 开发工具版本追踪" title="开发工具版本追踪">
+      <outline type="rss" text="uv Releases" title="uv Releases" xmlUrl="https://github.com/astral-sh/uv/releases.atom"/>
+      <outline type="rss" text="Zed Releases" title="Zed Releases" xmlUrl="https://github.com/zed-industries/zed/releases.atom"/>
+      <outline type="rss" text="Bun Releases" title="Bun Releases" xmlUrl="https://github.com/oven-sh/bun/releases.atom"/>
+      <outline type="rss" text="Biome Releases" title="Biome Releases" xmlUrl="https://github.com/biomejs/biome/releases.atom"/>
+      <outline type="rss" text="LangChain Releases" title="LangChain Releases" xmlUrl="https://github.com/langchain-ai/langchain/releases.atom"/>
     </outline>
 
     <!-- 学术论文 -->

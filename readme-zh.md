@@ -41,6 +41,8 @@
   - [📦 编程语言官方博客](#-编程语言官方博客)
   - [🏢 大厂技术博客](#-大厂技术博客)
   - [📮 技术周刊](#-技术周刊)
+  - [🧰 开发工具版本追踪](#-开发工具版本追踪)
+  - [📚 学术论文](#-学术论文)
 - [🔧 RSSHub 路由](#-rsshub-路由)
   - [社交媒体](#-社交媒体)
   - [技术社区](#-技术社区-1)
@@ -78,6 +80,7 @@
 | Hacker News AI | `https://hnrss.org/newest?q=AI` | HN AI 相关 |
 | Hacker News LLM | `https://hnrss.org/newest?q=LLM` | HN 大模型相关 |
 | Hacker News OpenClaw | `https://hnrss.org/newest?q=OpenClaw` | HN 上的 OpenClaw 讨论 |
+| Google Research Blog | `https://research.google/blog/rss/` | Google 研究动态 |
 
 #### AI 工具 & 产品
 
@@ -89,6 +92,16 @@
 | OpenClaw Commits | `https://github.com/openclaw/openclaw/commits/main.atom` | 主分支开发动态 |
 | 机器之心 | `https://www.jiqizhixin.com/rss` | 国内顶尖 AI 媒体 |
 | Simon Willison 博客 | `https://simonwillison.net/atom/everything/` | LLM 洞察，Django 联合创始人 |
+
+#### AI 编程 & Agent 工具
+
+| 名称 | 订阅地址 | 说明 |
+|------|----------|------|
+| OpenAI Codex Releases | `https://github.com/openai/codex/releases.atom` | Codex CLI 版本发布 |
+| Claude Code Releases | `https://github.com/anthropics/claude-code/releases.atom` | Claude Code 版本发布 |
+| Gemini CLI Releases | `https://github.com/google-gemini/gemini-cli/releases.atom` | Gemini CLI 版本发布 |
+| MCP Specification Releases | `https://github.com/modelcontextprotocol/specification/releases.atom` | MCP 规范更新 |
+| MCP Servers Releases | `https://github.com/modelcontextprotocol/servers/releases.atom` | MCP 服务器更新 |
 
 ---
 
@@ -267,6 +280,8 @@
 | 名称 | 订阅地址 | 说明 |
 |------|----------|------|
 | GitHub Blog | `https://github.blog/feed/` | GitHub 官方博客 |
+| GitHub Changelog | `https://github.blog/changelog/feed/` | GitHub 平台更新 |
+| GitHub Copilot Changelog | `https://github.blog/changelog/label/copilot/feed/` | Copilot 产品更新 |
 | Netflix Tech Blog | `https://netflixtechblog.com/feed` | Netflix 技术博客 |
 | AWS Blog | `https://aws.amazon.com/blogs/aws/feed/` | AWS 官方博客 |
 | Cloudflare Blog | `https://blog.cloudflare.com/rss/` | Cloudflare 技术博客 |
@@ -290,6 +305,20 @@
 | This Week in Rust | `https://this-week-in-rust.org/atom.xml` | Rust 社区周报 |
 | Golang Weekly | `https://golangweekly.com/rss/` | Go 生态精选周刊 |
 | ByteByteGo | `https://blog.bytebytego.com/feed` | 系统设计 Newsletter |
+
+---
+
+### 🧰 开发工具版本追踪
+
+> 适合追踪近期变化很快的开发工具和 Agent 框架
+
+| 工具 | 订阅地址 | 说明 |
+|------|----------|------|
+| uv | `https://github.com/astral-sh/uv/releases.atom` | Python 包管理器 |
+| Zed | `https://github.com/zed-industries/zed/releases.atom` | 代码编辑器 |
+| Bun | `https://github.com/oven-sh/bun/releases.atom` | JavaScript 运行时 |
+| Biome | `https://github.com/biomejs/biome/releases.atom` | 格式化与 Linter |
+| LangChain | `https://github.com/langchain-ai/langchain/releases.atom` | Agent 框架版本发布 |
 
 ---
 
