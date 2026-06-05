@@ -1,10 +1,10 @@
 {
-  "checkTime": "2026-06-02 18:56:30 (北京时间)",
-  "total": 85,
-  "valid": 82,
-  "limited": 3,
+  "checkTime": "2026-06-05 09:41:46 (北京时间)",
+  "total": 98,
+  "valid": 93,
+  "limited": 5,
   "invalid": 0,
-  "successRate": "96.5%",
+  "successRate": "94.9%",
   "feeds": [
     {
       "name": "OpenAI 博客",
@@ -97,13 +97,22 @@
       "error": null
     },
     {
-      "name": "Hugging Face 博客",
-      "url": "https://huggingface.co/blog/feed.xml",
+      "name": "Google Research Blog",
+      "url": "https://research.google/blog/rss/",
       "status": "valid",
       "valid": true,
       "limited": false,
       "statusCode": 200,
       "error": null
+    },
+    {
+      "name": "Hugging Face 博客",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "status": "limited",
+      "valid": false,
+      "limited": true,
+      "statusCode": 429,
+      "error": "HTTP 429"
     },
     {
       "name": "Stability AI",
@@ -138,12 +147,57 @@
       "status": "valid",
       "valid": true,
       "limited": false,
-      "statusCode": 200,
+      "statusCode": 302,
       "error": null
     },
     {
       "name": "Simon Willison's Blog",
       "url": "https://simonwillison.net/atom/everything/",
+      "status": "valid",
+      "valid": true,
+      "limited": false,
+      "statusCode": 200,
+      "error": null
+    },
+    {
+      "name": "OpenAI Codex Releases",
+      "url": "https://github.com/openai/codex/releases.atom",
+      "status": "valid",
+      "valid": true,
+      "limited": false,
+      "statusCode": 200,
+      "error": null
+    },
+    {
+      "name": "Claude Code Releases",
+      "url": "https://github.com/anthropics/claude-code/releases.atom",
+      "status": "valid",
+      "valid": true,
+      "limited": false,
+      "statusCode": 200,
+      "error": null
+    },
+    {
+      "name": "Gemini CLI Releases",
+      "url": "https://github.com/google-gemini/gemini-cli/releases.atom",
+      "status": "valid",
+      "valid": true,
+      "limited": false,
+      "statusCode": 200,
+      "error": null
+    },
+    {
+      "name": "MCP Specification Releases",
+      "url": "https://github.com/modelcontextprotocol/specification/releases.atom",
+      "status": "valid",
+      "valid": true,
+      "limited": false,
+      "statusCode": 301,
+      "error": null
+    },
+    {
+      "name": "MCP Servers Releases",
+      "url": "https://github.com/modelcontextprotocol/servers/releases.atom",
       "status": "valid",
       "valid": true,
       "limited": false,
@@ -576,6 +630,15 @@
     {
       "name": "Kotlin Blog",
       "url": "https://blog.jetbrains.com/kotlin/feed/",
+      "status": "limited",
+      "valid": false,
+      "limited": true,
+      "statusCode": 403,
+      "error": "HTTP 403"
+    },
+    {
+      "name": "GitHub Blog",
+      "url": "https://github.blog/feed/",
       "status": "valid",
       "valid": true,
       "limited": false,
@@ -583,8 +646,17 @@
       "error": null
     },
     {
-      "name": "GitHub Blog",
-      "url": "https://github.blog/feed/",
+      "name": "GitHub Changelog",
+      "url": "https://github.blog/changelog/feed/",
+      "status": "valid",
+      "valid": true,
+      "limited": false,
+      "statusCode": 200,
+      "error": null
+    },
+    {
+      "name": "GitHub Copilot Changelog",
+      "url": "https://github.blog/changelog/label/copilot/feed/",
       "status": "valid",
       "valid": true,
       "limited": false,
@@ -718,12 +790,57 @@
       "error": null
     },
     {
+      "name": "uv Releases",
+      "url": "https://github.com/astral-sh/uv/releases.atom",
+      "status": "valid",
+      "valid": true,
+      "limited": false,
+      "statusCode": 200,
+      "error": null
+    },
+    {
+      "name": "Zed Releases",
+      "url": "https://github.com/zed-industries/zed/releases.atom",
+      "status": "valid",
+      "valid": true,
+      "limited": false,
+      "statusCode": 200,
+      "error": null
+    },
+    {
+      "name": "Bun Releases",
+      "url": "https://github.com/oven-sh/bun/releases.atom",
+      "status": "valid",
+      "valid": true,
+      "limited": false,
+      "statusCode": 200,
+      "error": null
+    },
+    {
+      "name": "Biome Releases",
+      "url": "https://github.com/biomejs/biome/releases.atom",
+      "status": "valid",
+      "valid": true,
+      "limited": false,
+      "statusCode": 200,
+      "error": null
+    },
+    {
+      "name": "LangChain Releases",
+      "url": "https://github.com/langchain-ai/langchain/releases.atom",
+      "status": "valid",
+      "valid": true,
+      "limited": false,
+      "statusCode": 200,
+      "error": null
+    },
+    {
       "name": "Nature",
       "url": "https://www.nature.com/nature.rss",
       "status": "valid",
       "valid": true,
       "limited": false,
-      "statusCode": 303,
+      "statusCode": 200,
       "error": null
     },
     {
