@@ -1,10 +1,10 @@
 {
-  "checkTime": "2026-06-05 09:41:46 (北京时间)",
+  "checkTime": "2026-06-08 11:12:47 (北京时间)",
   "total": 98,
-  "valid": 93,
-  "limited": 5,
-  "invalid": 0,
-  "successRate": "94.9%",
+  "valid": 95,
+  "limited": 2,
+  "invalid": 1,
+  "successRate": "96.9%",
   "feeds": [
     {
       "name": "OpenAI 博客",
@@ -90,11 +90,11 @@
     {
       "name": "Hacker News OpenClaw",
       "url": "https://hnrss.org/newest?q=OpenClaw",
-      "status": "valid",
-      "valid": true,
+      "status": "invalid",
+      "valid": false,
       "limited": false,
-      "statusCode": 200,
-      "error": null
+      "statusCode": 502,
+      "error": "HTTP 502"
     },
     {
       "name": "Google Research Blog",
@@ -108,11 +108,11 @@
     {
       "name": "Hugging Face 博客",
       "url": "https://huggingface.co/blog/feed.xml",
-      "status": "limited",
-      "valid": false,
-      "limited": true,
-      "statusCode": 429,
-      "error": "HTTP 429"
+      "status": "valid",
+      "valid": true,
+      "limited": false,
+      "statusCode": 200,
+      "error": null
     },
     {
       "name": "Stability AI",
@@ -252,11 +252,11 @@
     {
       "name": "奶昔论坛最新话题",
       "url": "https://forum.naixi.net/forum.php?mod=rss",
-      "status": "limited",
-      "valid": false,
-      "limited": true,
-      "statusCode": 403,
-      "error": "HTTP 403"
+      "status": "valid",
+      "valid": true,
+      "limited": false,
+      "statusCode": 200,
+      "error": null
     },
     {
       "name": "Hacker News 首页",
@@ -630,11 +630,11 @@
     {
       "name": "Kotlin Blog",
       "url": "https://blog.jetbrains.com/kotlin/feed/",
-      "status": "limited",
-      "valid": false,
-      "limited": true,
-      "statusCode": 403,
-      "error": "HTTP 403"
+      "status": "valid",
+      "valid": true,
+      "limited": false,
+      "statusCode": 200,
+      "error": null
     },
     {
       "name": "GitHub Blog",
