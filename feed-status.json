@@ -1,10 +1,10 @@
 {
-  "checkTime": "2026-06-22 11:14:16 (北京时间)",
+  "checkTime": "2026-06-29 11:12:01 (北京时间)",
   "total": 98,
-  "valid": 94,
-  "limited": 1,
-  "invalid": 3,
-  "successRate": "95.9%",
+  "valid": 96,
+  "limited": 2,
+  "invalid": 0,
+  "successRate": "98.0%",
   "feeds": [
     {
       "name": "OpenAI 博客",
@@ -81,20 +81,20 @@
     {
       "name": "Hacker News LLM",
       "url": "https://hnrss.org/newest?q=LLM",
-      "status": "invalid",
-      "valid": false,
+      "status": "valid",
+      "valid": true,
       "limited": false,
-      "statusCode": 502,
-      "error": "HTTP 502"
+      "statusCode": 200,
+      "error": null
     },
     {
       "name": "Hacker News OpenClaw",
       "url": "https://hnrss.org/newest?q=OpenClaw",
-      "status": "invalid",
-      "valid": false,
+      "status": "valid",
+      "valid": true,
       "limited": false,
-      "statusCode": 502,
-      "error": "HTTP 502"
+      "statusCode": 200,
+      "error": null
     },
     {
       "name": "Google Research Blog",
@@ -459,11 +459,11 @@
     {
       "name": "CSS-Tricks",
       "url": "https://css-tricks.com/feed/",
-      "status": "valid",
-      "valid": true,
-      "limited": false,
-      "statusCode": 200,
-      "error": null
+      "status": "limited",
+      "valid": false,
+      "limited": true,
+      "statusCode": 415,
+      "error": "HTTP 415"
     },
     {
       "name": "Astro Blog",
@@ -666,11 +666,11 @@
     {
       "name": "Netflix Tech Blog",
       "url": "https://netflixtechblog.com/feed",
-      "status": "invalid",
-      "valid": false,
+      "status": "valid",
+      "valid": true,
       "limited": false,
-      "statusCode": null,
-      "error": "Timeout"
+      "statusCode": 200,
+      "error": null
     },
     {
       "name": "AWS Blog",
