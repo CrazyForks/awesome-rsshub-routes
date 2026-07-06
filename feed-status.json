@@ -1,10 +1,10 @@
 {
-  "checkTime": "2026-06-29 11:12:01 (北京时间)",
+  "checkTime": "2026-07-06 11:09:01 (北京时间)",
   "total": 98,
-  "valid": 96,
-  "limited": 2,
-  "invalid": 0,
-  "successRate": "98.0%",
+  "valid": 94,
+  "limited": 3,
+  "invalid": 1,
+  "successRate": "95.9%",
   "feeds": [
     {
       "name": "OpenAI 博客",
@@ -207,20 +207,20 @@
     {
       "name": "LinuxDo 最新话题",
       "url": "https://linux.do/latest.rss",
-      "status": "valid",
-      "valid": true,
-      "limited": false,
-      "statusCode": 200,
-      "error": null
+      "status": "limited",
+      "valid": false,
+      "limited": true,
+      "statusCode": 403,
+      "error": "HTTP 403"
     },
     {
       "name": "LinuxDo 热门话题",
       "url": "https://linux.do/top.rss",
-      "status": "valid",
-      "valid": true,
-      "limited": false,
-      "statusCode": 200,
-      "error": null
+      "status": "limited",
+      "valid": false,
+      "limited": true,
+      "statusCode": 403,
+      "error": "HTTP 403"
     },
     {
       "name": "V2EX 最热",
@@ -306,11 +306,11 @@
     {
       "name": "阮一峰的网络日志",
       "url": "https://www.ruanyifeng.com/blog/atom.xml",
-      "status": "valid",
-      "valid": true,
+      "status": "invalid",
+      "valid": false,
       "limited": false,
-      "statusCode": 200,
-      "error": null
+      "statusCode": 502,
+      "error": "HTTP 502"
     },
     {
       "name": "IT之家",
@@ -459,11 +459,11 @@
     {
       "name": "CSS-Tricks",
       "url": "https://css-tricks.com/feed/",
-      "status": "limited",
-      "valid": false,
-      "limited": true,
-      "statusCode": 415,
-      "error": "HTTP 415"
+      "status": "valid",
+      "valid": true,
+      "limited": false,
+      "statusCode": 200,
+      "error": null
     },
     {
       "name": "Astro Blog",
