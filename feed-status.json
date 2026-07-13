@@ -1,10 +1,10 @@
 {
-  "checkTime": "2026-07-06 11:09:01 (北京时间)",
+  "checkTime": "2026-07-13 13:35:26 (北京时间)",
   "total": 98,
-  "valid": 94,
-  "limited": 3,
+  "valid": 93,
+  "limited": 4,
   "invalid": 1,
-  "successRate": "95.9%",
+  "successRate": "94.9%",
   "feeds": [
     {
       "name": "OpenAI 博客",
@@ -90,11 +90,11 @@
     {
       "name": "Hacker News OpenClaw",
       "url": "https://hnrss.org/newest?q=OpenClaw",
-      "status": "valid",
-      "valid": true,
+      "status": "invalid",
+      "valid": false,
       "limited": false,
-      "statusCode": 200,
-      "error": null
+      "statusCode": 502,
+      "error": "HTTP 502"
     },
     {
       "name": "Google Research Blog",
@@ -306,11 +306,11 @@
     {
       "name": "阮一峰的网络日志",
       "url": "https://www.ruanyifeng.com/blog/atom.xml",
-      "status": "invalid",
-      "valid": false,
+      "status": "valid",
+      "valid": true,
       "limited": false,
-      "statusCode": 502,
-      "error": "HTTP 502"
+      "statusCode": 200,
+      "error": null
     },
     {
       "name": "IT之家",
@@ -459,11 +459,11 @@
     {
       "name": "CSS-Tricks",
       "url": "https://css-tricks.com/feed/",
-      "status": "valid",
-      "valid": true,
-      "limited": false,
-      "statusCode": 200,
-      "error": null
+      "status": "limited",
+      "valid": false,
+      "limited": true,
+      "statusCode": 415,
+      "error": "HTTP 415"
     },
     {
       "name": "Astro Blog",
