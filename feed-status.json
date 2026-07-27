@@ -1,10 +1,10 @@
 {
-  "checkTime": "2026-07-20 13:38:00 (北京时间)",
+  "checkTime": "2026-07-27 13:48:48 (北京时间)",
   "total": 98,
-  "valid": 94,
+  "valid": 92,
   "limited": 4,
-  "invalid": 0,
-  "successRate": "95.9%",
+  "invalid": 2,
+  "successRate": "93.9%",
   "feeds": [
     {
       "name": "OpenAI 博客",
@@ -90,11 +90,11 @@
     {
       "name": "Hacker News OpenClaw",
       "url": "https://hnrss.org/newest?q=OpenClaw",
-      "status": "valid",
-      "valid": true,
+      "status": "invalid",
+      "valid": false,
       "limited": false,
-      "statusCode": 200,
-      "error": null
+      "statusCode": 502,
+      "error": "HTTP 502"
     },
     {
       "name": "Google Research Blog",
@@ -450,11 +450,11 @@
     {
       "name": "Codrops",
       "url": "https://tympanus.net/codrops/feed/",
-      "status": "valid",
-      "valid": true,
+      "status": "invalid",
+      "valid": false,
       "limited": false,
-      "statusCode": 200,
-      "error": null
+      "statusCode": null,
+      "error": "Timeout"
     },
     {
       "name": "CSS-Tricks",
