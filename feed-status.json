@@ -1,10 +1,10 @@
 {
-  "checkTime": "2026-07-27 13:48:48 (北京时间)",
+  "checkTime": "2026-08-03 13:39:52 (北京时间)",
   "total": 98,
-  "valid": 92,
-  "limited": 4,
-  "invalid": 2,
-  "successRate": "93.9%",
+  "valid": 95,
+  "limited": 3,
+  "invalid": 0,
+  "successRate": "96.9%",
   "feeds": [
     {
       "name": "OpenAI 博客",
@@ -90,11 +90,11 @@
     {
       "name": "Hacker News OpenClaw",
       "url": "https://hnrss.org/newest?q=OpenClaw",
-      "status": "invalid",
-      "valid": false,
+      "status": "valid",
+      "valid": true,
       "limited": false,
-      "statusCode": 502,
-      "error": "HTTP 502"
+      "statusCode": 200,
+      "error": null
     },
     {
       "name": "Google Research Blog",
@@ -252,11 +252,11 @@
     {
       "name": "奶昔论坛最新话题",
       "url": "https://forum.naixi.net/forum.php?mod=rss",
-      "status": "limited",
-      "valid": false,
-      "limited": true,
-      "statusCode": 403,
-      "error": "HTTP 403"
+      "status": "valid",
+      "valid": true,
+      "limited": false,
+      "statusCode": 200,
+      "error": null
     },
     {
       "name": "Hacker News 首页",
@@ -450,11 +450,11 @@
     {
       "name": "Codrops",
       "url": "https://tympanus.net/codrops/feed/",
-      "status": "invalid",
-      "valid": false,
+      "status": "valid",
+      "valid": true,
       "limited": false,
-      "statusCode": null,
-      "error": "Timeout"
+      "statusCode": 200,
+      "error": null
     },
     {
       "name": "CSS-Tricks",
